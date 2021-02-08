@@ -1,2 +1,3 @@
 # jgotemplate
-jgoweb template
+
+Basic template for jgoweb apps
