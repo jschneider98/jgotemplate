@@ -11,14 +11,13 @@ import (
 func GetWebRouter() *web.Router {
 	path, _ := os.Getwd()
 
-	webContext := NewUxtWebContext()
+	webContext := NewWebContext()
 
 	rootRouter := web.New(*webContext).
 		Middleware(web.LoggerMiddleware).
 		Middleware(web.ShowErrorsMiddleware).
-		Middleware(CacheControlMiddleware(filepath.Join(path, "static"))).
 		Middleware(jgoweb.StaticMiddleware(filepath.Join(path, "static"))).
-		Middleware((*WebContext).LoadDi).
+		// Middleware((*WebContext).LoadDi).
 		Middleware((*WebContext).LoadEndPoint).
 		Middleware((*WebContext).LoadJob).
 		Middleware((*WebContext).LoadSession).
