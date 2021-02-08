@@ -1,0 +1,45 @@
+{
+	"server": {
+		"mode": "dev",
+		"sessionName": "session-name",
+		"sessionKey": "session-encryption-key",
+		"enableSsl": true,
+		"httpsHost": ":443",
+		"httpHost": ":80",
+		"healthHost": ":5020"
+	},
+	"dbConns": [
+		{
+			"shardName": "shard_01",
+			"dsn": "postgres://username:password@host/dbname?sslmode=disable",
+			"MaxOpenConns": 100,
+			"MaxIdleConns": 25,
+			"ConnMaxLifetime": 30,
+			"StatementTimeout": 9800
+		},
+		{
+			"shardName": "shard_02",
+			"dsn": "postgres://username:password@host/dbname?sslmode=disable",
+			"MaxOpenConns": 100,
+			"MaxIdleConns": 25,
+			"ConnMaxLifetime": 30,
+			"StatementTimeout": 9800
+		}
+	],
+	"googleOauth2Credentials": {
+		"clientId": "google_oauth2_client_id",
+		"clientSecret": "google_oauth2_client_secret"
+	},
+	"autocert": {
+		"allowedHost": "www.mydomain.com",
+		"email": "jdoe@email.com",
+		"directoryURL": "https://acme-staging-v02.api.letsencrypt.org/directory",
+		"cacheOptions": {
+			"backend":       "sql",
+			"driver":        "postgres",
+			"dsn":           "postgres://username:password@host/dbname?sslmode=disable",
+			"usePrecaching": "true",
+			"encryptionKey": "cache-encryption-key"
+		}
+	}
+}
