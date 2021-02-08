@@ -1,18 +1,13 @@
 package web
 
 import (
-	"bytes"
 	"errors"
 	"fmt"
 	"github.com/gocraft/web"
 	"github.com/jschneider98/jgoweb"
 	"github.com/jschneider98/jgoweb/util"
-	"github.com/jschneider98/uxt/models"
 	"html/template"
 	"net/http"
-	"os"
-	"path"
-	"path/filepath"
 )
 
 type WebContext struct {
