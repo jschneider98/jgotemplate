@@ -1,0 +1,11 @@
+{
+	"server": {
+		"mode": "dev",
+		"sessionName": "template-session",
+		"sessionKey": "u46IpCV9y5Vlur8YvODJEhgOY8m9JVE5",
+		"enableSsl": false,
+		"httpsHost": ":4443",
+		"httpHost": ":1718",
+		"healthHost": ":5020"
+	}
+}
