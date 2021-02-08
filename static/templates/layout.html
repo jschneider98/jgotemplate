@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Web Template</title>
+</head>
+
+<body>
+	<div id="app" class="content ht-100v pd-0">
+
+		[[block "header-menu" .]][[end]]
+
+		<div class="content-body bg-light">
+			<div class="container pd-x-0">
+				[[block "flash-messages" .]][[end]]
+				[[block "body" .]][[end]]
+			</div>
+		</div>
+	</div>
+
+	[[block "scripts" .]][[end]]
+</body>
+</html>
